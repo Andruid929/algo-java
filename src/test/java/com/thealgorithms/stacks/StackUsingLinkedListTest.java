@@ -1,10 +1,9 @@
 package com.thealgorithms.stacks;
 
+import java.util.NoSuchElementException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.NoSuchElementException;
 
 class StackUsingLinkedListTest {
 
@@ -36,7 +35,7 @@ class StackUsingLinkedListTest {
 
         linkedStack.pop();
 
-        Assertions.assertThrows(NoSuchElementException.class, () -> linkedStack.pop()); //Cannot pop from an empty stack
+        Assertions.assertThrows(NoSuchElementException.class, () -> linkedStack.pop()); // Cannot pop from an empty stack
     }
 
     @Test
@@ -49,7 +48,6 @@ class StackUsingLinkedListTest {
         linkedStack.push(17);
 
         Assertions.assertEquals(17, linkedStack.peek());
-
     }
 
     @Test

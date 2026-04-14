@@ -63,9 +63,9 @@ public class StackUsingLinkedList<T> {
             throw new NoSuchElementException();
         }
 
-        T removed = top.element; //Get the last inserted element before removing it
+        T removed = top.element; // Get the last inserted element before removing it
 
-        top = top.next; //Set the second to last element at the top
+        top = top.next; // Set the second to last element at the top
 
         size--;
 
@@ -84,11 +84,11 @@ public class StackUsingLinkedList<T> {
         Node next;
 
         if (top != null) {
-            next = top; //Save the current top node
+            next = top; // Save the current top node
 
-            top = node; //Update the newest node
+            top = node; // Update the newest node
 
-            top.next = next; //Make the new node point to the old node
+            top.next = next; // Make the new node point to the old node
         } else {
 
             top = node;
