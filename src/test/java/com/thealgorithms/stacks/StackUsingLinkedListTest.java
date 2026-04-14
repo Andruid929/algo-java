@@ -1,11 +1,6 @@
 package com.thealgorithms.stacks;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,13 +17,13 @@ class StackUsingLinkedListTest {
 
     @Test
     void peek() {
-        assertNull(linkedStack.peek());
+        Assertions.assertNull(linkedStack.peek());
 
         linkedStack.push(10);
         linkedStack.push(20);
         linkedStack.push(30);
 
-        assertEquals(30, linkedStack.peek());
+        Assertions.assertEquals(30, linkedStack.peek());
     }
 
     @Test
@@ -36,34 +31,34 @@ class StackUsingLinkedListTest {
         linkedStack.push(3);
         linkedStack.push(6);
 
-        assertEquals(6, linkedStack.pop());
-        assertEquals(3, linkedStack.peek());
+        Assertions.assertEquals(6, linkedStack.pop());
+        Assertions.assertEquals(3, linkedStack.peek());
 
         linkedStack.pop();
 
-        assertThrows(NoSuchElementException.class, () -> linkedStack.pop()); //Cannot pop from an empty stack
+        Assertions.assertThrows(NoSuchElementException.class, () -> linkedStack.pop()); //Cannot pop from an empty stack
     }
 
     @Test
     void push() {
         linkedStack.push(12);
 
-        assertEquals(12, linkedStack.peek());
+        Assertions.assertEquals(12, linkedStack.peek());
 
         linkedStack.push(15);
         linkedStack.push(17);
 
-        assertEquals(17, linkedStack.peek());
+        Assertions.assertEquals(17, linkedStack.peek());
 
     }
 
     @Test
     void isEmpty() {
-        assertTrue(linkedStack.isEmpty());
+        Assertions.assertTrue(linkedStack.isEmpty());
 
         linkedStack.push(1);
 
-        assertFalse(linkedStack.isEmpty());
+        Assertions.assertFalse(linkedStack.isEmpty());
     }
 
     @Test
@@ -73,11 +68,11 @@ class StackUsingLinkedListTest {
         linkedStack.push(3);
         linkedStack.push(4);
 
-        assertEquals(4, linkedStack.size());
+        Assertions.assertEquals(4, linkedStack.size());
 
         linkedStack.pop();
         linkedStack.pop();
 
-        assertEquals(2, linkedStack.size());
+        Assertions.assertEquals(2, linkedStack.size());
     }
 }
