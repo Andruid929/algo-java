@@ -1,4 +1,4 @@
-/**
+/*
  * [Brief description of what the algorithm does]
  * <p>
  * Time Complexity: O(n) [or appropriate complexity]

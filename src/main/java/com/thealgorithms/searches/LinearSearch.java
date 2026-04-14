@@ -1,4 +1,4 @@
-/**
+/*
  * Performs Linear Search on an array.
  *
  * Linear search checks each element one by one until the target is found

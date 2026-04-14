@@ -1,4 +1,4 @@
-/**
+/*
  * Interpolation Search estimates the position of the target value
  * based on the distribution of values.
  *
